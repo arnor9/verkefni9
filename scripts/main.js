@@ -48,9 +48,9 @@ async function createAuthorsList(query, parent) {
   return list;
 }
 async function onSearch(e) {
-  // console.log("blah");
-  // let { value } = e.target.querySelector('input');
-  // console.log(value);
+  console.log("blah");
+  let { value } = e.target.querySelector('input');
+  console.log(value);
   const mainElement = document.querySelector('main');
   await createAuthorsList('Stephen', mainElement);
 
@@ -66,7 +66,7 @@ header.appendChild(searchForm);
 async function main(query) {
   const mainElement = document.querySelector('main');
 
-  //await createAuthorsList(query, mainElement);
+  await createAuthorsList(query, mainElement);
 }
 
 main('Stephen');
